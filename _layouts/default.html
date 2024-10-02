@@ -11,15 +11,12 @@
 
     gtag('config', 'G-E00L9PT3V9');
   </script>
-  <title>{{ site.name }}</title>
+  <title>Beste Aydemir</title>
 
   <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-
-  <meta name="author" content="{{ site.name }}" />
+  <meta name="author" content="Beste Aydemir" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
-  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+  <link rel="stylesheet" type="text/css" href="style.css" />
   <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 
 </head>
@@ -31,18 +28,13 @@
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr style="padding:0px">
             <td style="padding:2.5%;width:60%;vertical-align:middle">
-              <h1>
-                Beste Aydemir
-              </h1>
-              <p>I am an MSc student in Data Science at Ludwig-Maximilian University of Munich.
-              </p>
-              <p>
-                I have a BSc in Electrical and Electronics Engineering from Bilkent University.
-              </p>
+              <h1>Beste Aydemir</h1>
+              <p>I am an MSc student in Data Science at Ludwig-Maximilian University of Munich.</p>
+              <p>I have a BSc in Electrical and Electronics Engineering from Bilkent University.</p>
               <p style="text-align:center">
-                <a target="_blank" href="https://mailhide.io/e/1AzQKiqM"> Email</a> &nbsp;/&nbsp;
+                <a target="_blank" href="https://mailhide.io/e/1AzQKiqM">Email</a> &nbsp;/&nbsp;
                 <a href="https://github.com/besteaydemir">GitHub</a> &nbsp;/&nbsp;
-                <a href="https://www.linkedin.com/in/besteaydemir/"> LinkedIn </a>
+                <a href="https://www.linkedin.com/in/besteaydemir/">LinkedIn</a>
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
@@ -51,197 +43,76 @@
           </tr>
         </table>
 
+        <!-- Projects Section -->
+        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+          <tr>
+            <td style="padding:2.5%;width:100%;vertical-align:middle">
+              <h2>Projects</h2>
+              <ul>
+                <li><strong>Autonomous Driving LLM-based Agent in Streaming Videos</strong><br/>
+                  <ul>
+                    <li>Utilized multimodal models such as InstructBLIP and Video-Llava for in-context learning on driving datasets using PyTorch.</li>
+                    <li>Implemented memory systems for LLM agents in streaming environments.</li>
+                    <li>Leveraged LRZ AI server for faster training and inference.</li>
+                  </ul>
+                </li>
+                <li><strong>Diffusion Robot Path Planning</strong><br/>
+                  <ul>
+                    <li>Developed a diffusion model for 2D and 3D path generation using PyTorch.</li>
+                    <li>Trained models using Google Cloud Engine with CUDA for enhanced performance.</li>
+                    <li>Researched diffusion-based modeling papers to improve the project.</li>
+                  </ul>
+                </li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+
+        <!-- Experience Section -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:2.5%;width:100%;vertical-align:middle">
               <h2>Experience</h2>
-              <p>
-                --
-              </p>
+              <ul>
+                <li><strong>Fraunhofer</strong> - Ingolstadt, Germany <br/>
+                  Part-Time Student Worker (Nov 2023 - Nov 2024)<br/>
+                  <ul>
+                    <li>Worked on Multi-Agent Reinforcement Learning, focusing on decentralized planning and control approaches.</li>
+                    <li>Developed Graph Neural Networks for decentralized control of multi-agent systems.</li>
+                  </ul>
+                </li>
+                <li><strong>University of Edinburgh</strong> - Edinburgh, Scotland <br/>
+                  Researcher (June 2020 - April 2023, Online)<br/>
+                  <ul>
+                    <li>Developed neurocomputational reinforcement models for behavioral analysis in the Morris Water Maze experiment.</li>
+                    <li>Featured a computational model poster at the European Brain and Behaviour Society (EBBS) Meeting.</li>
+                  </ul>
+                </li>
+                <li><strong>Bilkent University</strong> - Ankara, Turkey <br/>
+                  Undergraduate Researcher (July 2020 - October 2022)<br/>
+                  <ul>
+                    <li>Worked on Federated Bayesian Optimization with differential privacy for secure learning environments.</li>
+                    <li>Developed code for the paper 'Pareto Active Learning with Gaussian Processes and Adaptive Discretization.'</li>
+                  </ul>
+                </li>
+                <li><strong>Isbank</strong> - Istanbul, Turkey <br/>
+                  Software Engineering Intern (July 2019 - August 2019)<br/>
+                  <ul>
+                    <li>Developed a simple robot using Raspberry Pi and Python for road tracking, distance measurement, and command processing.</li>
+                  </ul>
+                </li>
+                <li><strong>Huawei</strong> - Istanbul, Turkey <br/>
+                  Software Engineering Intern (June 2019 - July 2019)<br/>
+                  <ul>
+                    <li>Worked on network protocols and software testing using tools such as Selenium and JMeter.</li>
+                  </ul>
+                </li>
+              </ul>
             </td>
           </tr>
         </table>
-<!--         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
 
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'research' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              {{post.authors}}
-
-              <br>
-              <em>{{post.venue}}</em>, {{ post.date | date: "%Y" }}
-              <br>
-              {% if post.arxiv %}
-              <a href="{{post.arxiv}}">arxiv</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.youtube %}
-              <a href="{{post.youtube}}">youtube</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Intel Projects</h2>
-              <p>Besides my work on the RealSense depth sensors and the publications above, a sampling of my publicly disclosed work
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat == 'Intel' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
-
-              <br>
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
-              {% endif %}
-              {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
-              {% endif %}
-              {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-        <br>
-        <br>
-        <br>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-          <tr>
-            <td style="padding:2.5%;width:100%;vertical-align:middle">
-              <h2>Other Projects</h2>
-              <p> These include coursework, side projects and unpublished research work. 
-              </p>
-            </td>
-          </tr>
-        </table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-
-          {% for post in site.posts %}
-          {% for cat in post.categories %}
-          {% if cat != 'research' and cat != 'Intel' %}
-          <tr>
-            <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-              <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
-            </td>
-            <td style="padding:2.5%;width:75%;vertical-align:middle">
-              <h3>{{post.title}}</h3>
-              <br>
-              <em>{{post.categories}} {{post.course}}</em>
-              <br>
-              {{ post.date | date: "%Y-%m-%d" }}
-
-              <br>
-              {% if post.website %}
-              <a href="{{post.website}}">website</a> /
-              {% endif %}
-              {% if post.paper %}
-              <a href="{{post.paper}}">paper</a> /
-              {% endif %}
-              {% if post.patent %}
-              <a href="{{post.patent}}">patent</a> /
-              {% endif %}
-              {% if post.patent2 %}
-              <a href="{{post.patent2}}">patent #2</a> /
-              {% endif %}
-              {% if post.patent3 %}
-              <a href="{{post.patent3}}">patent #3</a> /
-              {% endif %}
-              {% if post.video %}
-              <a href="{{post.video}}">video</a> /
-              {% endif %}
-              {% if post.video2 %}
-              <a href="{{post.video2}}">video #2</a> /
-              {% endif %}
-              {% if post.code %}
-              <a href="{{post.code}}">code</a> /
-              {% endif %}
-              {% if post.poster %}
-              <a href="{{post.poster}}">poster</a> /
-              {% endif %}
-              {% if post.slides %}
-              <a href="{{post.slides}}">slides</a> /
-              {% endif %}
-              <p></p>
-              {{ post.excerpt }}
-            </td>
-          </tr>
-          {% endif %}
-          {% endfor %}
-          {% endfor %}
-        </table>
-
+        <!-- Footer Section -->
         <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
           <tr>
             <td style="padding:0px">
@@ -254,8 +125,7 @@
         </table>
       </td>
     </tr>
-  </table> -->
+  </table>
 </body>
 
 </html>
-
