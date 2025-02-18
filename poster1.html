@@ -5,32 +5,66 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project Poster</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            text-align: center;
+            background-color: #f8f9fa;
+        }
+        canvas {
+            width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
     <h2>Project Poster</h2>
     <canvas id="pdf-canvas"></canvas>
 
     <script>
+        console.log("PDF.js script running...");
+
+        if (typeof pdfjsLib === 'undefined') {
+            console.error("PDF.js failed to load.");
+        } else {
+            console.log("PDF.js loaded successfully.");
+        }
+
         var url = 'pdfs/ADLR_Team18_Diff_For_Robotic_Path_Planning.pdf'; 
 
         var loadingTask = pdfjsLib.getDocument(url);
         loadingTask.promise.then(function(pdf) {
-            pdf.getPage(1).then(function(page) {
-                var scale = 1.5;
-                var viewport = page.getViewport({ scale: scale });
+            console.log("PDF loaded, total pages:", pdf.numPages);
+            return pdf.getPage(1);
+        }).then(function(page) {
+            console.log("Rendering page 1...");
+            var viewport = page.getViewport({ scale: 1 });
 
-                var canvas = document.getElementById('pdf-canvas');
-                var context = canvas.getContext('2d');
-                canvas.width = viewport.width;
-                canvas.height = viewport.height;
+            var canvas = document.getElementById('pdf-canvas');
+            var context = canvas.getContext('2d');
 
-                var renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-                page.render(renderContext);
-            });
+            // Set canvas width to full page width
+            var scale = window.innerWidth / viewport.width;
+            var scaledViewport = page.getViewport({ scale: scale });
+
+            canvas.width = scaledViewport.width;
+            canvas.height = scaledViewport.height;
+
+            var renderContext = {
+                canvasContext: context,
+                viewport: scaledViewport
+            };
+            return page.render(renderContext).promise;
+        }).then(function() {
+            console.log("Page rendered successfully.");
+        }).catch(function(error) {
+            console.error("Error loading/rendering PDF:", error);
         });
+
+        // Resize the PDF dynamically if the window size changes
+        window.addEventListener('resize', () => location.reload());
     </script>
 </body>
 </html>
